@@ -93,12 +93,15 @@ a[href='#main']:focus {
     background-color: black;
     text-transform: uppercase;
 }
+figcaption {
+    text-align: center;
+}
 
 
 
 
 
-@media only screen and (max-width:800px){
+@media only screen and (max-width:600px){
     body {
         background-color: lightcoral;
     }
@@ -120,7 +123,6 @@ a[href='#main']:focus {
 
     }
 
-   
     
     img.one {
         border: black solid 2px;
@@ -222,4 +224,57 @@ a[href='#main']:focus {
     h1 {
         animation-play-state: paused;
     }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px)
+{
+body{
+    background-image: linear-gradient(to bottom right, rgb(117, 154, 223), rgb(200, 248, 255));;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-rows: auto;
+}
+nav{
+    grid-column: 4/ span 1;
+    grid-row: 1;
+    background-color: rgb(162, 205, 247);
+}
+nav ul {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin-top: 60px;
+    font-size: 150%;
+    margin-left: 10px
+
+}
+h1 {
+    /* grid-column: 1/span 4;
+    grid-row: 2; */
+    font-size: 350%;
+    animation-play-state: paused;
+}
+div {
+    margin:50px
+}
+figcaption {
+    text-align: center;
+}
+img{
+    padding: 10px; 
+}
+.gallery{
+    display: inline-block;
+}
+}
+.gif{
+    display: none
+}
+
+.one {
+    transition: transform 1s ease;
+}
+
+.one:hover {
+    transform: translateX(30px)
 }
